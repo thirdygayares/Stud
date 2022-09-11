@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homepage">
+
+    <RelativeLayout
+        android:id="@+id/homepageRelativelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@drawable/radius"
+        >
+
+        <ImageView
+            android:id="@+id/studImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/stud" />
+
+        <TextView
+            android:id="@+id/studText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="70dp"
+            android:text="an app that help students to be productive by providing time management tools and resources."
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:justificationMode="inter_word"
+            android:layout_below="@+id/studImage"/>
+
+        <ImageView
+            android:id="@+id/fireteraImage"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_below="@+id/studText"
+            android:src="@drawable/firetera"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/homepageRelativelayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homepageRelativelayout1">
+
+        <Button
+            android:id="@+id/getStartedBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="80dp"
+            android:paddingVertical="20dp"
+            android:text="GET STARTED"
+            android:textSize="19dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            app:cornerRadius="100dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
