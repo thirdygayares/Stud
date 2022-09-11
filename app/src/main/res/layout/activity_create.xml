@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Create">
+
+    <RelativeLayout
+        android:id="@+id/createRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/createLinearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_weight="1"
+                android:text="Add Subjects" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="230dp"
+                android:layout_weight="1"
+                android:text="Add" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/createLinearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_below="@+id/createLinearLayout1"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/subjectInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of Subject*"
+                app:helperText="Required*"
+                app:helperTextTextColor="#D2001A"
+                android:outlineSpotShadowColor="#9C9696"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:endIconMode="clear_text"
+
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/subjectEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/codeInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject Code*"
+                app:helperText="Required*"
+                app:helperTextTextColor="#D2001A"
+                android:outlineSpotShadowColor="#9C9696"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:endIconMode="clear_text"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/codeEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/teacherInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teacher*"
+                app:helperText="Optional*"
+                app:helperTextTextColor="#D2001A"
+                android:outlineSpotShadowColor="#9C9696"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:endIconMode="clear_text"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/teacherEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="20"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/scheduleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Schedule:"
+            android:textColor="#3AB0FF"
+            android:layout_marginStart="20dp"
+            android:layout_below="@+id/createLinearLayout2"/>
+
+        <LinearLayout
+            android:id="@+id/createLinearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_below="@+id/createLinearLayout2"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/typeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="@string/type"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dayInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/day"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/timeInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/hours"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+
+                >
+
+                <AutoCompleteTextView
+                    android:id="@+id/auto_complete_txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
