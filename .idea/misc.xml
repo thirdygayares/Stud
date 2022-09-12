@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+
         <entry key="..\:/Users/Raiden/Stud/app/src/main/res/layout/activity_subject_singlepage.xml" value="0.14764492753623187" />
         <entry key="..\:/Users/gayar/AndroidStudioProjects/Stud/app/src/main/res/layout/activity_create.xml" value="0.25" />
         <entry key="..\:/Users/gayar/AndroidStudioProjects/Stud/app/src/main/res/layout/activity_homepage.xml" value="0.25" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/gayar/AndroidStudioProjects/Stud/app/src/main/res/layout/schedule_item.xml" value="0.21458333333333332" />
         <entry key="..\:/Users/gayar/AndroidStudioProjects/Stud/app/src/main/res/layout/subject_details_recyclerview.xml" value="0.2557291666666667" />
         <entry key="..\:/Users/gayar/AndroidStudioProjects/Stud/app/src/main/res/layout/task_details_recyclerview.xml" value="0.33" />
+
       </map>
     </option>
   </component>
