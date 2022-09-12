@@ -1,18 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<!--    header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        Today Schedule-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:background="@color/white"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today Schedule"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="25dp"
+                android:textColor="#3D3F41"
+
+                >
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textSchedule"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="#0679FF"
+                android:text="Monday September 9">
+
+            </TextView>
+
+
+        </RelativeLayout>
+<!--        end of today schedule-->
+
+<!--        profile icon-->
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:background="@color/cardview_light_background"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_baseline_account_circle_24"
+                ></ImageView>
+
+        </RelativeLayout>
+<!--    end of profile icon-->
+    </RelativeLayout>
+<!--    end of header-->
+
+<!--    Recyclerview na pahalang-->
+
+<!--    Recycler view task-->
     <TextView
+        android:id="@+id/textTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/header"
+        android:padding="10dp"
+        android:text="Task"
+        android:textSize="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TaskRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTask"
+        android:paddingHorizontal="12dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <!--    Recycler view task-->
+    <TextView
+        android:id="@+id/textSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TaskRecycleView"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:text="All Subjects"
+        android:textSize="20dp">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/SubjectRecylerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textSubject"
+        android:paddingHorizontal="12dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</RelativeLayout>
