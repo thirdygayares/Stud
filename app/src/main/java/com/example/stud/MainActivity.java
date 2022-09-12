@@ -27,20 +27,22 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
         setContentView(R.layout.activity_main);
 
         subjectDetails();
-
-
         setupsubjects();
         RecyclerView recyclerView = findViewById(R.id.SubjectRecylerView);
         SubjectAdapter adapter = new SubjectAdapter(this, subjectModels, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
     private void setupsubjects() {
+
+
+
+
         //from database data
         ArrayList<String> SubjectCode = new ArrayList<>();
         ArrayList<String> CountTask = new ArrayList<>();
         ArrayList<String> Schedule = new ArrayList<>();
+
 
 
         DatabaseHelper myDB = new DatabaseHelper(this);
