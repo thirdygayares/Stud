@@ -63,10 +63,6 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
                     Schedule.get(i)
             ));
         }
-
-
-
-
     }
 
     private void subjectDetails() {
@@ -79,6 +75,8 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
 
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(this, Subject_singlepage.class);
+        intent.putExtra("subjectId", subjectModels.get(position).getId());
+        startActivity(intent);
     }
 }
