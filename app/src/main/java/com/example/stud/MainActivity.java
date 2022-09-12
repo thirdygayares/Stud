@@ -54,9 +54,7 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
         ArrayList<String> Schedule = new ArrayList<>();
 
 
-
         DatabaseHelper myDB = new DatabaseHelper(this);
-
         Cursor data = myDB.getSubjectsList();
 
         if(data.getCount() == 0 ){
@@ -75,10 +73,6 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
                     Schedule.get(i)
             ));
         }
-
-
-
-
     }
 
     private void subjectDetails() {
@@ -88,9 +82,10 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
         ArrayList<String> price = new ArrayList<>();
     }
 
-
     @Override
     public void onItemClick(int position) {
-
+        Intent intent = new Intent(this, Subject_singlepage.class);
+        intent.putExtra("subjectId", subjectModels.get(position).getId());
+        startActivity(intent);
     }
 }
