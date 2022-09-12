@@ -9,17 +9,23 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.stud.Adapter.SubjectAdapter;
 import com.example.stud.Adapter.SubjectInete;
 import com.example.stud.Model.SubjectModel;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements SubjectInete {
 
     ArrayList<SubjectModel> subjectModels = new ArrayList<>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,10 +34,14 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
 
         subjectDetails();
         setupsubjects();
+        
+
         RecyclerView recyclerView = findViewById(R.id.SubjectRecylerView);
         SubjectAdapter adapter = new SubjectAdapter(this, subjectModels, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+//
     }
     private void setupsubjects() {
 
