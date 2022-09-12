@@ -36,8 +36,8 @@ public class Subject_singlepage extends AppCompatActivity {
             while (data.moveToNext()) {
                 subjectCodeName.setText(data.getString(2));
                 subjectName.setText(data.getString(1));
-                schedule.setText(data.getString(5));
-                teacher.setText(data.getString(5))
+                schedule.setText(data.getString(5) + " " + data.getString(6));
+                teacher.setText(data.getString(3));
             }
         }
 

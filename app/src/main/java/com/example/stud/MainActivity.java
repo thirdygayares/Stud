@@ -42,9 +42,7 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
         ArrayList<String> CountTask = new ArrayList<>();
         ArrayList<String> Schedule = new ArrayList<>();
 
-
         DatabaseHelper myDB = new DatabaseHelper(this);
-
         Cursor data = myDB.getSubjectsList();
 
         if(data.getCount() == 0 ){
@@ -71,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements SubjectInete {
         ArrayList<String> singleprice = new ArrayList<>();
         ArrayList<String> price = new ArrayList<>();
     }
-
 
     @Override
     public void onItemClick(int position) {
